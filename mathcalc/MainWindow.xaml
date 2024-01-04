@@ -1,0 +1,52 @@
+﻿<Window x:Class="CalcMath2.MainWindow"
+	        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	        xmlns:local="clr-namespace:CalcMath2"
+	        mc:Ignorable="d"
+	        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="gameTitle" Text="CalcMath Game!" Grid.Row="0" Grid.Column="1" BorderThickness="0" IsReadOnly="True"
+	                   VerticalAlignment="Center" HorizontalAlignment="Center"
+	                    FontSize="55" FontFamily="Calibri" Foreground="Silver" />
+        <StackPanel x:Name="Buttons" Grid.Column="1" Grid.Row="2" Orientation="Vertical" VerticalAlignment="Center">
+            <Button x:Name="grade1" Content="1st grade"  Height="50" Width="250" FontSize="22" Click="grade1_Click" Background="AliceBlue"/>
+            <Button x:Name="grade2" Content="2nd grade"  Height="50" Width="250" FontSize="22" Click="grade2_Click" Background="AliceBlue"/>
+            <Button x:Name="grade3" Content="3rd grade"  Height="50" Width="250" FontSize="22" Click="grade3_Click" Background="AliceBlue"/>
+            <Button x:Name="grade4" Content="4th grade"  Height="50" Width="250" FontSize="22" Click="grade4_Click" Background="AliceBlue" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock x:Name="enterName" Text="enter your name" FontFamily="Calibri" Height="32" Width="137" FontSize="20" />
+            <TextBox x:Name="nameAnswer" Height="30" Width="150" BorderBrush="MistyRose" BorderThickness="3" TextChanged="nameAnswer_TextChanged"/>
+        </StackPanel>
+        <StackPanel x:Name="exercises" Grid.Row="0" Grid.Column="1"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+            <TextBox x:Name="num1" TextAlignment="Center" BorderBrush="AliceBlue" FontFamily="Calibri" BorderThickness="3" IsReadOnly="True"  Height="30" Width="50"/>
+            <TextBox x:Name="operation" TextAlignment="Center" BorderBrush="AliceBlue" FontFamily="Calibri" BorderThickness="3" IsReadOnly="True"  Height="30" Width="30"/>
+            <TextBox x:Name="num2" TextAlignment="Center" BorderBrush="AliceBlue" FontFamily="Calibri" BorderThickness="3" Grid.Row="2" Grid.Column="1" IsReadOnly="True"  Height="30" Width="50"/>
+            <TextBox x:Name="equals" TextAlignment="Center" Text="=" BorderBrush="AliceBlue" FontFamily="Calibri" BorderThickness="3" IsReadOnly="True"  Height="30" Width="30"/>
+            <TextBox x:Name="answeruser" TextAlignment="Center" BorderBrush="AliceBlue" FontFamily="Calibri" BorderThickness="3" Grid.Row="2" Grid.Column="1" TextInput="answeruser_TextInput" Height="30" Width="50"/>
+        </StackPanel>
+        <Button x:Name="checking" Grid.Column="1" Grid.Row="4" Content="check answer" Width="100" Height="30"  VerticalAlignment="Stretch" Visibility="Collapsed" Click="checking_Click"/>
+        <Button x:Name="nextQuestion" Grid.Column="1" Grid.Row="4" Content="question" Width="100" Height="30" VerticalAlignment="Top" Visibility="Collapsed" Click="nextQuestion_Click"/>
+        <TextBox x:Name="heyuser" Grid.Row="0" Grid.Column="1" Height="30" Width="150"  BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" Visibility="Collapsed" FontSize="20"/>
+        <Image>
+            <Image.Source>
+                <BitmapImage x:Name="CalcImage"  UriSource="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRqZO2RxOfvJtsE-5jEtWstcPEb0kUgmfrCUIG5OJg6kL7bcLe" />
+            </Image.Source>
+        </Image>
+    </Grid>
+</Window>
+	    
